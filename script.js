@@ -2,10 +2,7 @@ const textArea = document.querySelector('.text-area');
 const mensaje = document.querySelector('.mensaje');
 
 
-
-
-
-
+// Función que se ejecuta al presiona el botón "Encriptar"
 const btnEncriptar = () => {
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
@@ -13,6 +10,7 @@ const btnEncriptar = () => {
     mensaje.style.backgroundImage = "none";
 }
 
+// Función que se ejecuta al presionar el botón "Desencriptar"
 const btnDesencriptar = () => {
     const textoDesencriptado = desencriptar(mensaje.value);
     mensaje.value = textoDesencriptado;
@@ -21,7 +19,7 @@ const btnDesencriptar = () => {
 }
 
 
-
+// Función que encripta el texto
 const encriptar = (stringEncriptado) => {
     let matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']]
     stringEncriptado = stringEncriptado.toLowerCase();
@@ -35,6 +33,9 @@ const encriptar = (stringEncriptado) => {
     return stringEncriptado;
 }
 
+
+
+// Función que desencripta el texto
 const desencriptar = (stringDesencriptado) => {
     let matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']]
     stringDesencriptado = stringDesencriptado.toLowerCase();
@@ -45,4 +46,9 @@ const desencriptar = (stringDesencriptado) => {
         }
     }
     return stringDesencriptado;
+}
+
+// Implementacion de boton copiar
+const btnCopiar = () => {
+    navigator.clipboard.writeText(mensaje.value); // Copia el texto que hay en mensaje.value
 }
