@@ -2,6 +2,19 @@ const textArea = document.querySelector('.text-area');
 const mensaje = document.querySelector('.mensaje');
 
 
+// Función para validar que no se ingresen mayúsculas o acentos
+const validarEntrada = (event) => {
+    const regex = /^[a-z\s]*$/; // Solo letras minúsculas y espacios. regex es una expresión regular que se encarga de validar que solo se ingresen letras minúsculas y espacios
+
+    // Si el carácter no es válido, prevenir la entrada
+    if (!regex.test(event.key)) {
+        event.preventDefault();
+        alert("Solo se permiten letras minúsculas y sin acentos");
+    }
+};
+
+
+
 // Función que se ejecuta al presiona el botón "Encriptar"
 const btnEncriptar = () => {
     const textoEncriptado = encriptar(textArea.value);
@@ -52,3 +65,8 @@ const desencriptar = (stringDesencriptado) => {
 const btnCopiar = () => {
     navigator.clipboard.writeText(mensaje.value); // Copia el texto que hay en mensaje.value
 }
+
+
+
+// Validar la entrada de texto en tiempo real
+textArea.addEventListener('keypress', validarEntrada); //! Evento que se ejecuta al presionar una tecla. keypress es un evento que se dispara cuando una tecla es presionada y despues ejecuta la función validarEntrada
