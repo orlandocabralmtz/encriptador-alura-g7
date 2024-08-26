@@ -130,13 +130,12 @@ main {
     }
 
     .btn-desencriptar {
-        margin-left: 0;
+        margin-left: 24px;
     }
 
     .btn-copiar {
         margin-left: 0;
         margin-top: 20px;
-    ;
     }
 }
 
@@ -146,7 +145,12 @@ main {
     }
     .botones {
         flex-direction: column;
-    }   
+        gap: 24px;
+    }  
+    .btn-desencriptar {
+        margin-left: 0px;
+    }
+     
 
     /* desaparecer el boton copiar */
     .btn-copiar {
