@@ -7,7 +7,7 @@ const validarEntrada = (event) => {
     const regex = /^[a-z\s]*$/; // Solo letras minúsculas y espacios. regex es una expresión regular que se encarga de validar que solo se ingresen letras minúsculas y espacios
 
     // Si el carácter no es válido, prevenir la entrada
-    if (!regex.test(event.key)) {
+    if (!regex.test(event.key)) { //
         event.preventDefault();
         alert("Solo se permiten letras minúsculas y sin acentos");
     }

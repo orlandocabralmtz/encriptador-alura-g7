@@ -20,6 +20,7 @@ main {
     margin-left: 80px;
 }
 
+
 .text-area {
     border: none;
     color: #0A3871;
@@ -29,6 +30,16 @@ main {
 
 ::placeholder {
     color: #0A3871
+}
+
+.mensaje-ayuda{
+    display: flex;   
+}
+.img-exclamacion{
+    width: 15px;
+    height: 15px;
+    align-self: center;
+    margin-right: 10px;
 }
 
 .text-area:focus {
@@ -47,7 +58,7 @@ main {
     margin-left: 98px;
     margin-top: 20px;
     padding-left: 20px;
-    position: fixed;
+    position: fixed;    
 }
 
 .mensaje:focus {
@@ -94,6 +105,7 @@ main {
     width: 328px;
 }
 
+
 .informacion {
     color: #495057;
     font-size: 18px;
@@ -107,6 +119,7 @@ main {
 
 
 
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
@@ -115,14 +128,16 @@ main {
 
     .text-area {
         margin-top: 0;
+        width: 90%;
     }
 
     .mensaje {
         margin-left: 0;
-        margin-top: 20px;
+        margin-top: 10px;
         background-image: none;
-        height: 150px;
-        width: 600px;
+        height: 100px;
+        /* width: 600px; */
+        width: 90%;
     }
 
     .botones {
@@ -134,15 +149,16 @@ main {
     }
 
     .btn-copiar {
-        margin-left: 0;
-        margin-top: 20px;
+        margin-left: 15%;
+        margin-top: 115px;       
     }
 }
 
 @media (max-width: 375px) {
-    .mensaje {
-        width: 350px;
-    }
+    /* .mensaje {
+        /* width: 350px; 
+        /* width: 90%; 
+    } */
     .botones {
         flex-direction: column;
         gap: 24px;
